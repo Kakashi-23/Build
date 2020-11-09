@@ -28,26 +28,26 @@ opt.add_experimental_option("prefs", {
 
 
 def notify_class_ended():
-    account_sid = 'AC27aab58fe36b9113e1d341848427c806'
-    auth_token = '284a82b189ce68ea30c089960d53894a'
+    account_sid = 'Your account sid from twilio'
+    auth_token = 'Your token from twilio'
     client = Client(account_sid, auth_token)
 
     client.messages.create(
-        from_='whatsapp:+14155238886',
+        from_='whatsapp:twilio no here',
         body='Your class had ended',
-        to='whatsapp:+919532709622'
+        to='whatsapp:+Number here'
     )
 
 
 def class_joined():
-    account_sid = 'AC27aab58fe36b9113e1d341848427c806'
-    auth_token = '284a82b189ce68ea30c089960d53894a'
+     account_sid = 'Your account sid from twilio'
+    auth_token = 'Your token from twilio'
     client = Client(account_sid, auth_token)
 
     client.messages.create(
-        from_='whatsapp:+14155238886',
-        body='class joined successfully',
-        to='whatsapp:+919532709622'
+        from_='whatsapp:twilio no here',
+        body='Your class had ended',
+        to='whatsapp:+Number here'
     )
 
 
@@ -88,15 +88,16 @@ def get_meet_id(subject_fun):
 
 
 def notify_no_class(reason):
-    account_sid = 'AC27aab58fe36b9113e1d341848427c806'
-    auth_token = '284a82b189ce68ea30c089960d53894a'
+     account_sid = 'Your account sid from twilio'
+    auth_token = 'Your token from twilio'
     client = Client(account_sid, auth_token)
 
     client.messages.create(
-        from_='whatsapp:+14155238886',
-        body=str(reason),
-        to='whatsapp:+919532709622'
+        from_='whatsapp:twilio no here',
+        body='Your class had ended',
+        to='whatsapp:+Number here'
     )
+
 
 
 def start_class(sheet, day, class_time):
@@ -160,13 +161,13 @@ def login(meet_id):
     driver.get(
         "https://accounts.google.com/ServiceLogin?service=mail&passive=true&rm=false&continue=https://mail.google.com/mail/&ss=1&scc=1&ltmpl=default&ltmplcache=2&emr=1&osid=1#identifier")
     time.sleep(4)
-    driver.find_element_by_xpath("//input[@name='identifier']").send_keys("17372@nith.ac.in")
+    driver.find_element_by_xpath("//input[@name='identifier']").send_keys('Your email address")
     time.sleep(2)
     # Next Button:
     driver.find_element_by_xpath("//*[@id='identifierNext']/div/button/div[2]").click()
     time.sleep(5)
     # Password:
-    driver.find_element_by_xpath("//input[@name='password']").send_keys("kakashi@234")
+    driver.find_element_by_xpath("//input[@name='password']").send_keys("Your Password")
     time.sleep(2)
     # next button:
     driver.find_element_by_xpath("//*[@id='passwordNext']/div/button").click()
